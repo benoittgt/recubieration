@@ -12,7 +12,7 @@ class App extends Component {
 
   componentDidMount() {
     Tabletop.init({
-      key: '111_7rU2qfo73sna0_ZcFt9QLFqTPl9LqevS3FIfHlio',
+      key: 'https://docs.google.com/spreadsheets/d/111_7rU2qfo73sna0_ZcFt9QLFqTPl9LqevS3FIfHlio/edit#gid=0',
       callback: googleData => {
         console.log('google sheet data --->', googleData)
       },
