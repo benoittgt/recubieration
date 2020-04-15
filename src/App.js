@@ -14,8 +14,12 @@ class App extends Component {
     Tabletop.init({
       key: 'https://docs.google.com/spreadsheets/d/111_7rU2qfo73sna0_ZcFt9QLFqTPl9LqevS3FIfHlio/edit#gid=0',
       callback: googleData => {
+        let group = googleData.reduce((r, a) => {
+          r[a.Jour] = [...r[a.Jour] || [], a];
+          return r;
+        }, {});
         this.setState({
-          data: googleData
+          data: group
         })
       },
       simpleSheet: true
@@ -34,19 +38,27 @@ class App extends Component {
           </div>
         </header>
         <div id="event-list">
-          <ul>
-            {
-              data.map(obj => {
-                return (
-                  <li key={obj.Nom}>
-                    <p class='event-name'>Le {obj.Jour} à {obj.Horaires} avec {obj.Brasserie}</p>
-                    <p>Lieu: {obj.Lieu}</p>
-                    <p>Horaires: {obj.Horaires}</p>
-                  </li>
-                )
-              })
-            }
-         </ul>
+        {
+          Object.keys(data).map((key, index) => {
+            return (
+              <section>
+                <h3 className='event-day'>{key}</h3>
+                <ul key={key} className={key}>
+                  {
+                    data[key].map(festevent => {
+                      return (
+                        <li key={festevent.Nom}>
+                          <p className='event-name'>Le {festevent.Jour} à {festevent.Horaires} avec {festevent.Brasserie}</p>
+                          <p>Lieu: {festevent.Lieu}</p>
+                          <p>Horaires: {festevent.Horaires}</p>
+                        </li>
+                      )
+                    })
+                }
+                </ul>
+              </section>
+            )
+          })}
         </div>
       </div>
     );

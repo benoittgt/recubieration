@@ -7,30 +7,40 @@
   display: block;
   text-align: center;
   font-family: 'Mali', cursive;
-  font-size: 6vw;
+  font-size: 5vw;
+  margin-bottom: .1em;
+}
+
+.event-description {
+  text-align: center;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 2vw;
+  color: #585858;
 }
 
 .event-date {
   text-align: center;
   border-top: 3px solid #fecd4c;
   border-bottom: 3px solid #fecd4c;
-  color:#000000;
+  color: #000000;
   font-family: 'Patrick Hand', cursive;
 }
 
-.event-description {
-  text-align: center;
-  font-family: 'Patrick Hand', cursive;
-  font-size: 4vw;
-  color: #585858;
+#event-list .event-day {
+  color: #8888;
+  margin-left: 1em;
+  margin-bottom: 0px;
+  background-color: #cae2f7;
+  padding: 6px;
 }
 
 #event-list ul {
   display: flex;
-  list-style: none;
   flex-wrap: wrap;
-  justify-content: center;
+  list-style: none;
+  margin-top: .1em
 }
+
 #event-list ul li {
   border-top: 2px solid #65b3e1;
   padding: .4em;
@@ -38,11 +48,6 @@
   height: 120px;
   width: 250px;
   align-self: flex-end;
-}
-
-#event-list ul li .event-name{
-  font-size: 1em;
-  font-style: strong;
 }
 
 @media all and (max-width: 800px) {
