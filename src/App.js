@@ -28,6 +28,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="event-title">Nantes Beer Festival</h1>
+          <h2 className="event-description">Le rendez vous nantais de la bière artisanale</h2>
           <div className="event-date">
             <h2>1 - 2 septembre 2020</h2>
           </div>
@@ -38,7 +39,7 @@ class App extends Component {
               data.map(obj => {
                 return (
                   <li key={obj.Nom}>
-                    <p>Le {obj.Jours} à {obj.Horaires} avec {obj.Brasserie}</p>
+                    <p class='event-name'>Le {obj.Jour} à {obj.Horaires} avec {obj.Brasserie}</p>
                     <p>Lieu: {obj.Lieu}</p>
                     <p>Horaires: {obj.Horaires}</p>
                   </li>

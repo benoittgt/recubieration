@@ -18,27 +18,35 @@
   font-family: 'Patrick Hand', cursive;
 }
 
-#event-list,
-ul {
+.event-description {
+  text-align: center;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 4vw;
+  color: #585858;
+}
+
+#event-list ul {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
   justify-content: center;
 }
-li {
-  border: 1px solid #fecd4c;
-  padding: 1em;
+#event-list ul li {
+  border-top: 2px solid #65b3e1;
+  padding: .4em;
   margin: 1em;
-  height: 200px;
+  height: 120px;
   width: 250px;
   align-self: flex-end;
 }
 
+#event-list ul li .event-name{
+  font-size: 1em;
+  font-style: strong;
+}
+
 @media all and (max-width: 800px) {
-  #event-list,
-  li {
-    width: 90%;
-  }
+  #event-list ul li { width: 90%; }
 }
 
 body {
