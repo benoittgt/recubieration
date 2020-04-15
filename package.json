@@ -9,7 +9,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "tabletop": "^1.6.2"
+    "tabletop": "^1.6.2",
+    "typeface-mali": "0.0.63",
+    "typeface-patrick-hand": "0.0.72",
+    "typeface-roboto": "0.0.75"
   },
   "scripts": {
     "start": "react-scripts start",
